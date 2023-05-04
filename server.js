@@ -20,10 +20,8 @@ if (args.debug) {
 if (args.h || args.help) {
     console.log(`
 usage: node server.js --port=5000
-
 This package serves the static HTML, CSS, and JS files in a /public directory.
 It also creates logs in a common log format (CLF) so that you can better.
-
   --stat,  -s    Specify the directory for static files to be served
                     Default: ./public/
   --port, -p    Specify the port for the HTTP server to listen on
@@ -147,5 +145,3 @@ app.get('/app/rpsls/play', (req, res) => {
 app.use((req, res) => {
   res.status(404).send('404 NOT FOUND');
 });
-
-

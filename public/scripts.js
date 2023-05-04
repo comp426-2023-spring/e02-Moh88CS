@@ -25,26 +25,38 @@ function startOver() {
     document.getElementById('results').innerHTML = '';
   }
 
-function resetShotSelection() {
+  function resetShotSelection() {
     let game = $('input[type=radio][name=game]:checked').val();
-    let firstShot;
+    let randomShot = getRandomShot(game);
   
-    if (game === 'rps') {
-      firstShot = 'rock';
-    } else {
-      firstShot = 'lizard';
-    }
-  
-    // Reset the selected shot to the first valid option for the chosen game
+    // Reset the selected shot to a random valid option for the chosen game
     $('input[type=radio][name=shot]').prop('checked', false);
-    $(`input[type=radio][name=shot][value=${firstShot}]`).prop('checked', true);
+    $(`input[type=radio][name=shot][value=${randomShot}]`).prop('checked', true);
   }
+  
+
+function getRandomShot(game) {
+    const availableShots = {
+      rps: ['rock', 'paper', 'scissors'],
+      rpsls: ['rock', 'paper', 'scissors', 'lizard', 'spock']
+    };
+  
+    const shots = availableShots[game];
+    return shots[Math.floor(Math.random() * shots.length)];
+  }
+  
   
   
 
 async function playGame() {
     let game = $('input[type=radio][name=game]:checked').val();
     let shot = $('input[type=radio][name=shot]:checked').val();
+  
+    // Check if the user has not selected an opponent
+    let opponentCheckbox = document.getElementById('opponent');
+    if (!opponentCheckbox.checked) {
+      shot = getRandomShot(game); // Set the user's shot to a random shot
+    }
   
     let baseurl = window.location.href + 'app/';
     console.log(baseurl);
@@ -66,4 +78,6 @@ async function playGame() {
       resultsDiv.innerHTML = `${you}<br>${opponent}<br>${outcome}`;
     }
   }
+  
+  
   

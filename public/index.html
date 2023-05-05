@@ -11,22 +11,24 @@
 
 <body onload="showHideShots()">
 	<div class="container">
-
+		<h1 class="main-heading">Play Rock Paper Scissors & RPSLS!</h1>
 		<form id="userinput" class="" action="javascript:void(0);">
 			<input type="radio" id="rps" name="game" value="rps" checked="checked"
 				onclick="resetShotSelection(); showHideShots();">
 			<label for="rps">Play rock, paper, scissors?</label>
-			<a href="https://wrpsa.com/the-official-rules-of-rock-paper-scissors/">Look here for information on the rules of RPS!</a>
-			<br /><br />
+			<a href="https://wrpsa.com/the-official-rules-of-rock-paper-scissors/" style="margin-left: 10px;">Look here
+				for information on the rules of RPS!</a>
+			<br><br>
 			<input type="radio" id="rpsls" name="game" value="rpsls" onclick="resetShotSelection(); showHideShots();">
 			<label for="rpsls">Play rock, paper, scissors, lizard, Spock?</label>
-			<a href="https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock">Look here for information on the rules of RPSLS!</a>
-			<br /><br />
+			<a href="https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock"
+				style="margin-left: 10px;">Look here for information on the rules of RPSLS!</a>
+			<br><br>
 
 			<input type="checkbox" id="opponent" name="playtype" value="opponent"
 				onclick="resetShotSelection(); showHideShots();">
 			<label for="opponent">Play against an opponent?</label>
-			<br /><br />
+			<br><br>
 			<div class="input-container rps">
 				<input type="radio" id="rock" name="shot" value="rock" class="shots">
 				<label class="input-container" for="rock"><img src="./img/rock.jpg" alt="rock"
@@ -52,11 +54,11 @@
 				<label class="input-container" for="spock"><img src="./img/spock.jpg" alt="spock"
 						style="width: 50px; height: 50px;">Spock</label>
 			</div>
-			<!--			<br/><br/>
+			<!--			<br><br>
 			<input type="submit" id="play" name="controls" value="Play">
       <input type="submit" id="startover" name="controls" value="Start Over"> -->
 		</form>
-		<br /><br />
+		<br><br>
 		<button type="button" id="play" onclick="playGame()">Play</button>
 		<button type="button" id="startover" onclick="startOver()">Start Over</button>
 		<div id="results"></div>
@@ -65,5 +67,4 @@
 		<!-- For interface examples, look in the `/examples/` directory in the root of your starter code repo. -->
 	</div>
 </body>
-
 </html>

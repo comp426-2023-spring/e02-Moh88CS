@@ -19,7 +19,7 @@ function showHideShots() {
     }
   } else {
     $(".input-container.rps, .input-container.rpsls").hide();
-    
+
     $("label[class='input-container' for='rock'], label[class='input-container' for='paper'], label[class='input-container' for='scissors'], label[class='input-container' for='lizard'], label[class='input-container' for='spock']").hide(); // Hide the labels
   }
 

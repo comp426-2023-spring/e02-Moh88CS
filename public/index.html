@@ -1,46 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-		<meta charset="utf-8">
-        <title>Rock</title>
-		<link href="./styles.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-		<script src="./scripts.js"></script>
-        <!-- Link to your script file(s) and CSS in here somewhere -->
-    </head>
-    <body onload="showHideShots()">
+<head>
+	<meta charset="utf-8">
+	<title>RPS and RPSLS</title>
+	<link href="./styles.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<script src="./scripts.js"></script>
+	<!-- Link to your script file(s) and CSS in here somewhere -->
+</head>
+
+<body onload="showHideShots()">
+	<div class="container">
 
 		<form id="userinput" class="" action="javascript:void(0);">
-			<input type="radio" id="rps" name="game" value="rps" checked="checked" onclick="resetShotSelection(); showHideShots();">
+			<input type="radio" id="rps" name="game" value="rps" checked="checked"
+				onclick="resetShotSelection(); showHideShots();">
 			<label for="rps">Play rock, paper, scissors?</label>
-			<br/><br/>
+			<a href="https://wrpsa.com/the-official-rules-of-rock-paper-scissors/">Look here for information on the rules of RPS!</a>
+			<br /><br />
 			<input type="radio" id="rpsls" name="game" value="rpsls" onclick="resetShotSelection(); showHideShots();">
 			<label for="rpsls">Play rock, paper, scissors, lizard, Spock?</label>
-			<br/><br/>
-			<input type="checkbox" id="opponent" name="playtype" value="opponent" onclick="showHideShots()">
+			<a href="https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock">Look here for information on the rules of RPSLS!</a>
+			<br /><br />
+
+			<input type="checkbox" id="opponent" name="playtype" value="opponent"
+				onclick="resetShotSelection(); showHideShots();">
 			<label for="opponent">Play against an opponent?</label>
-			<br/><br/>
-			<input type="radio" id="rock" name="shot" value="rock" class="rps shots" checked="checked">
-			<label class="shots rps">Rock</label>
-			<input type="radio" id="paper" name="shot" value="paper" class="rps shots">
-			<label class="shots rps">Paper</label>
-			<input type="radio" id="scissors" name="shot" value="scissors" class="rps shots">
-			<label class="shots rps">Scissors</label>
-			<input type="radio" id="lizard" name="shot" value="lizard" class="rpsls shots">
-			<label class="shots rpsls">Lizard</label>
-			<input type="radio" id="spock" name="shot" value="spock" class="rpsls shots">
-			<label class="shots rpsls">Spock</label>
-<!--			<br/><br/>
+			<br /><br />
+			<div class="input-container rps">
+				<input type="radio" id="rock" name="shot" value="rock" class="shots">
+				<label class="input-container" for="rock"><img src="./img/rock.jpg" alt="rock"
+						style="width: 50px; height: 50px;">Rock</label>
+			</div>
+			<div class="input-container rps">
+				<input type="radio" id="paper" name="shot" value="paper" class="shots">
+				<label class="input-container" for="paper"><img src="./img/paper.jpg" alt="rock"
+						style="width: 50px; height: 50px;">Paper</label>
+			</div>
+			<div class="input-container rps">
+				<input type="radio" id="scissors" name="shot" value="scissors" class="shots">
+				<label class="input-container" for="scissors"><img src="./img/scissors.jpg" alt="rock"
+						style="width: 50px; height: 50px;">Scissors</label>
+			</div>
+			<div class="input-container rpsls">
+				<input type="radio" id="lizard" name="shot" value="lizard" class="shots">
+				<label class="input-container" for="lizard"><img src="./img/lizard.jpg" alt="lizard"
+						style="width: 50px; height: 50px;">Lizard</label>
+			</div>
+			<div class="input-container rpsls">
+				<input type="radio" id="spock" name="shot" value="spock" class="shots">
+				<label class="input-container" for="spock"><img src="./img/spock.jpg" alt="spock"
+						style="width: 50px; height: 50px;">Spock</label>
+			</div>
+			<!--			<br/><br/>
 			<input type="submit" id="play" name="controls" value="Play">
       <input type="submit" id="startover" name="controls" value="Start Over"> -->
 		</form>
-		<br/><br/>
-    <button type="button" id="play" onclick="playGame()">Play</button>
-    <button type="button" id="startover" onclick="startOver()">Start Over</button>
-	<div id="results"></div>
+		<br /><br />
+		<button type="button" id="play" onclick="playGame()">Play</button>
+		<button type="button" id="startover" onclick="startOver()">Start Over</button>
+		<div id="results"></div>
 
-    <!-- Your interface markup goes here -->
-    <!-- For interface examples, look in the `/examples/` directory in the root of your starter code repo. -->
+		<!-- Your interface markup goes here -->
+		<!-- For interface examples, look in the `/examples/` directory in the root of your starter code repo. -->
+	</div>
+</body>
 
-    </body>
 </html>

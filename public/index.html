@@ -13,7 +13,7 @@
 	<div class="container">
 		<h1 class="main-heading">Play Rock Paper Scissors &amp; RPSLS!</h1>
 		<form id="userinput" class="" action="javascript:void(0);">
-			<input type="radio" id="rps" name="game" value="rps" checked="checked"
+			<input type="radio" id="rps" name="game" value="rps" checked
 				onclick="resetShotSelection(); showHideShots();">
 			<label for="rps">Play rock, paper, scissors?</label>
 			<a href="https://wrpsa.com/the-official-rules-of-rock-paper-scissors/" style="margin-left: 10px;">Look here
@@ -54,16 +54,14 @@
 				<label class="input-container" for="spock"><img src="./img/spock.jpg" alt="spock"
 						style="width: 50px; height: 50px;">Spock</label>
 			</div>
+			<br><br>
+		    <button type="submit" id="play" name="controls" onclick="playGame()">Play</button>
+		    <button type="submit" id="startover" name="controls" onclick="startOver()">Start Over</button>
 			<!--			<br><br>
 			<input type="submit" id="play" name="controls" value="Play">
       <input type="submit" id="startover" name="controls" value="Start Over"> -->
 		</form>
-	<div class="submit">
-		<br><br>
-		<button type="button" id="play" onclick="playGame()">Play</button>
-		<button type="button" id="startover" onclick="startOver()">Start Over</button>
 		<div id="results"></div>
-	</div>
 
 		<!-- Your interface markup goes here -->
 		<!-- For interface examples, look in the `/examples/` directory in the root of your starter code repo. -->

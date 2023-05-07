@@ -16,13 +16,13 @@
 			<input type="radio" id="rps" name="game" value="rps" checked
 				onclick="resetShotSelection(); showHideShots();">
 			<label for="rps">Play rock, paper, scissors?</label>
-			<a href="https://wrpsa.com/the-official-rules-of-rock-paper-scissors/" style="margin-left: 10px;">Look here
+			<a href="https://wrpsa.com/the-official-rules-of-rock-paper-scissors/">Look here
 				for information on the rules of RPS!</a>
 			<br><br>
 			<input type="radio" id="rpsls" name="game" value="rpsls" onclick="resetShotSelection(); showHideShots();">
 			<label for="rpsls">Play rock, paper, scissors, lizard, Spock?</label>
-			<a href="https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock"
-				style="margin-left: 10px;">Look here for information on the rules of RPSLS!</a>
+			<a href="https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock">
+				Look here for information on the rules of RPSLS!</a>
 			<br><br>
 
 			<input type="checkbox" id="opponent" name="playtype" value="opponent"
@@ -31,28 +31,23 @@
 			<br><br>
 			<div class="input-container rps">
 				<input type="radio" id="rock" name="shot" value="rock" class="shots">
-				<label class="input-container" for="rock"><img src="./img/rock.jpg" alt="rock"
-						style="width: 50px; height: 50px;">Rock</label>
+				<label class="input-container" for="rock"><img src="./img/rock.jpg" alt="rock">Rock</label>
 			</div>
 			<div class="input-container rps">
 				<input type="radio" id="paper" name="shot" value="paper" class="shots">
-				<label class="input-container" for="paper"><img src="./img/paper.jpg" alt="rock"
-						style="width: 50px; height: 50px;">Paper</label>
+				<label class="input-container" for="paper"><img src="./img/paper.jpg" alt="rock">Paper</label>
 			</div>
 			<div class="input-container rps">
 				<input type="radio" id="scissors" name="shot" value="scissors" class="shots">
-				<label class="input-container" for="scissors"><img src="./img/scissors.jpg" alt="rock"
-						style="width: 50px; height: 50px;">Scissors</label>
+				<label class="input-container" for="scissors"><img src="./img/scissors.jpg" alt="rock">Scissors</label>
 			</div>
 			<div class="input-container rpsls">
 				<input type="radio" id="lizard" name="shot" value="lizard" class="shots">
-				<label class="input-container" for="lizard"><img src="./img/lizard.jpg" alt="lizard"
-						style="width: 50px; height: 50px;">Lizard</label>
+				<label class="input-container" for="lizard"><img src="./img/lizard.jpg" alt="lizard">Lizard</label>
 			</div>
 			<div class="input-container rpsls">
 				<input type="radio" id="spock" name="shot" value="spock" class="shots">
-				<label class="input-container" for="spock"><img src="./img/spock.jpg" alt="spock"
-						style="width: 50px; height: 50px;">Spock</label>
+				<label class="input-container" for="spock"><img src="./img/spock.jpg" alt="spock">Spock</label>
 			</div>
 			<br><br>
 		    <button type="submit" id="play" name="controls" onclick="playGame()">Play</button>

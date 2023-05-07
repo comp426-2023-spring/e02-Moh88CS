@@ -11,7 +11,7 @@
 
 <body onload="showHideShots()">
 	<div class="container">
-		<h1 class="main-heading">Play Rock Paper Scissors & RPSLS!</h1>
+		<h1 class="main-heading">Play Rock Paper Scissors &amp; RPSLS!</h1>
 		<form id="userinput" class="" action="javascript:void(0);">
 			<input type="radio" id="rps" name="game" value="rps" checked="checked"
 				onclick="resetShotSelection(); showHideShots();">
@@ -58,10 +58,12 @@
 			<input type="submit" id="play" name="controls" value="Play">
       <input type="submit" id="startover" name="controls" value="Start Over"> -->
 		</form>
+	<div class="submit">
 		<br><br>
 		<button type="button" id="play" onclick="playGame()">Play</button>
 		<button type="button" id="startover" onclick="startOver()">Start Over</button>
 		<div id="results"></div>
+	</div>
 
 		<!-- Your interface markup goes here -->
 		<!-- For interface examples, look in the `/examples/` directory in the root of your starter code repo. -->

@@ -30,6 +30,7 @@ function showHideShots() {
 }
 
 function startOver() {
+  $('#play').show();
   document.getElementById('userinput').reset();
   document.getElementById('results').innerHTML = '';
   showHideShots();
@@ -54,6 +55,7 @@ function getRandomShot(game) {
 }
 
 async function playGame() {
+  $('#play').hide();
   let game = $('input[type=radio][name=game]:checked').val();
   let shot = $('input[type=radio][name=shot]:checked').val();
 
